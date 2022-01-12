@@ -1,20 +1,21 @@
 <template>
     <div class="Product-page">
         <div class="columns is-multiline">
-            <div class="column is-9">
-                <figure class="image is-4by3">
+            <div class="column is-6">
+                <figure class="image is-3by2">
                     <img v-bind:src="product.get_image" alt="Image">
                 </figure>
-
-                <h1 class="title">{{product.name}}</h1>
-                <p>{{product.description}}</p>
             </div>
 
-            <div class="column is-3">
-                <h2 class="subtitle">Information</h2>
-                <p><strong>Price: </strong>IDR{{ product.price }}</p>
+            <div class="column">
+                <h2 class="title">Information</h2>
 
-                <div class="field has-addons mt-6">
+                <h5 class="subtitle is-4">{{product.name}}</h5>
+                <p class="mb-5">{{product.description}}</p>
+
+                <p><strong>Price: </strong>IDR {{ product.price }}</p>
+
+                <div class="field has-addons mt-3">
                     <div class="control">
                         <input type="number" class="input" min="1" v-model="quantity">
                     </div>

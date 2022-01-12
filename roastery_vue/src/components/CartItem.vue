@@ -1,13 +1,13 @@
 <template>
      <tr>
          <td ><router-link :to="item.product.get_absolute_url" class="has-text-dark ">{{ item.product.name }}</router-link></td>
-         <td>IDR {{ item.product.price }}</td>
+         <td>IDR {{ item.product.price.toLocaleString() }}</td>
          <td>
              {{ item.quantity }}
              <a class="has-text-grey is-size-4" @click="decrementQuantity(item)">-</a>
              <a class="has-text-grey is-size-5" @click="incrementQuantity(item)">+</a>
          </td>
-         <td>IDR {{ getItemTotal(item).toFixed(2) }}</td>
+         <td>IDR {{ getItemTotal(item).toLocaleString() }}</td>
          <td><button class="delete" @click="removeFromCart(item)"></button></td>
      </tr>
 </template>

@@ -97,9 +97,9 @@
                             v-bind:key="item.product.id"
                         >
                             <td>{{ item.product.name }}</td>
-                            <td>IDR {{ item.product.price }}</td>
+                            <td>IDR {{ item.product.price.toLocaleString() }}</td>
                             <td>{{ item.quantity }}</td>
-                            <td>IDR {{ getItemTotal(item) }}</td>
+                            <td>IDR {{ getItemTotal(item).toLocaleString() }}</td>
                         </tr>
                     </tbody>
 
@@ -107,7 +107,7 @@
                         <tr>
                             <td colspan="2">Total</td>
                             <td>{{ cartTotalLength }}</td>
-                            <td>IDR {{ cartTotalPrice}}</td>
+                            <td>IDR {{ cartTotalPrice.toLocaleString() }}</td>
                         </tr>
                     </tfoot>
                 </table>

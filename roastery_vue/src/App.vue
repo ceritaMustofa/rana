@@ -1,5 +1,5 @@
 <template>
-  <div id="wrapper">
+  <body id="wrapper">
     <nav class="navbar">
       <div class="navbar-brand ml-4">
         <router-link to="/" class="navbar-item">
@@ -15,7 +15,7 @@
       
       
 
-      <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active': showMobileMenu}">
+      <div class="navbar-menu" id="navbar-menu" v-bind:class="{'is-active':showMobileMenu}">
         <div class="navbar-start">
           <router-link class="navbar-item" to="/">RANA ROASTERY</router-link>
           <router-link class="navbar-item" to="/about">ABOUT</router-link>
@@ -72,7 +72,7 @@
         </p>
       </div>
     </footer>
-  </div>
+  </body>
 </template>
 
 <script>
@@ -93,7 +93,7 @@ export default {
     const token = this.$store.state.token
 
     if (token) {
-      axios.defaults.headers.common['Authorization'] = "Bearer" + token
+      axios.defaults.headers.common['Authorization'] = "Token " + token
     } else {
       axios.defaults.headers.common['Authorization'] = ""
     }

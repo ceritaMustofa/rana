@@ -30,7 +30,7 @@
             <div class="column is-12 box" v-if="cartTotalLength">
                 <h2 class="subtitle">summery</h2>
 
-                <strong>IDR {{ cartTotalPrice }}</strong>, {{ cartTotalLength }} items
+                <strong>IDR {{ cartTotalPrice.toLocaleString() }}</strong> | {{ cartTotalLength }} items
 
                 <hr>
 

@@ -1,6 +1,0 @@
-Todo list
-
-- Done Install and setup Django environment
-- Done Install dan setup vue environment
-- Done Include Font Awesome
-- Done Set up base template

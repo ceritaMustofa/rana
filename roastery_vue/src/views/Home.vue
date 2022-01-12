@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="hero is-medium is-primary mb-6">
+    <section class="hero banner is-primary mb-6">
       <div class="hero-body has-text-centered">
         <p class="title mb-6">
           Welcome to Rana Roastery
@@ -43,7 +43,7 @@ export default {
   mounted()  {
     this.getLatestProducts()
 
-    document.title = 'Home' + ' | Rana'
+    document.title = 'Rana Roastery'
   },
   methods: {
     async getLatestProducts() {
@@ -65,3 +65,18 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.banner {
+  height: 75vh;
+  background-image: url(../assets/coffee.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+</style>
